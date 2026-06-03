@@ -45,6 +45,9 @@ app.use('/api/auth', authRoutes)
 app.use('/api/resumes', resumeRoutes)
 app.use('/api/generate', generatorRoutes)
 app.use('/api/admin', adminRoutes)
+app.get('/', (req, res) => {
+  res.json({ status: 'Backend is running' })
+})
 
 app.use(notFound)
 app.use(errorHandler)
