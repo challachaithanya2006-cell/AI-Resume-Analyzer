@@ -39,9 +39,9 @@ function UploadPanel({ uploadedFile, onUpload, onAnalysis }) {
         const formData = new FormData()
         formData.append('resume', file)
 
-        const response = await axios.post(
-          'http://127.0.0.1:5000/api/resumes/analyze',
-          formData,
+        await axios.post(
+  'https://ai-resume-analyzer-api-egyw.onrender.com/api/resumes/analyze',
+  formData,
           {
             headers: {
               'Content-Type': 'multipart/form-data',
